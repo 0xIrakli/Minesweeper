@@ -1,6 +1,6 @@
 # Minesweeper
 
-#About
+## About
 Can Generate and solve minesweeper boards with different difficulties.
 
 ### TODO:
