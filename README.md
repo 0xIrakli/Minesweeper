@@ -1,7 +1,5 @@
 # Minesweeper
 
----
-
 Can Generate and solve minesweeper boards with different difficulties.
 
 ---
@@ -12,5 +10,3 @@ Can Generate and solve minesweeper boards with different difficulties.
 - [ ] Solver Algorithm
 - [ ] Difficulty settings
 - [ ] Proper GUI
-
----
