@@ -8,3 +8,4 @@ Can Generate and solve minesweeper boards with different difficulties.
 - [X] Board Rendering
 - [ ] Solver Algorithm
 - [ ] Difficulty settings
+- [ ] Proper GUI
