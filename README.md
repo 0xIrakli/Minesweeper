@@ -2,7 +2,7 @@
 
 Can Generate and solve minesweeper boards with different difficulties.
 
----
+___
 
 ### TODO:
 - [X] Board Generation
