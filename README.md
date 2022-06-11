@@ -1,6 +1,6 @@
 # Minesweeper
 
-Can Generate and solve Minesweeper boards with different difficulties.
+Can generate and solve Minesweeper boards with different difficulties.
 
 ### TODO:
 - [X] Board Generation
