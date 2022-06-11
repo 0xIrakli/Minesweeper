@@ -12,13 +12,14 @@ grid = Grid(win, MINE_COUNT, GRID_WIDTH, GRID_HEIGHT)
 grid.generate()
 grid.add_mines()
 grid.update_numbers()
-grid.print()
 
 while True:
     win.fill((51, 51, 51))
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             quit()
+
     grid.draw()
     disp.update()

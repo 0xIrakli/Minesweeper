@@ -35,14 +35,18 @@ class Grid:
         grid = deepcopy(self.grid)
         for y in range(self.h):
             for x in range(self.w):
-                if self.grid[y][x] != -1:
-                    neighbour_bombs = 0
-                    for Y in range(-1, 2):
-                        for X in range(-1, 2):
-                            xx = min(self.w-1, max(0, x+X))
-                            yy = min(self.h-1, max(0, y+Y))
-                            neighbour_bombs += self.grid[yy][xx]
-                    grid[y][x] = abs(neighbour_bombs)
+
+                if self.grid[y][x] == -1: #Skip bombs
+                    continue
+                
+                neighbour_bombs = 0
+                #Scan a 3x3 area around the tile for bombs
+                for Y in range(y-1, y+2):
+                    for X in range(x-1, x+2):
+                        if 0 <= Y < self.h and 0 <= X < self.w:
+                            neighbour_bombs += self.grid[Y][X]
+                            
+                grid[y][x] = abs(neighbour_bombs)
         self.grid = grid
 
     def print(self):
@@ -75,3 +79,7 @@ class Grid:
                 rect = img.get_rect()
                 rect.center = (x*RES+RES/2, y*RES+RES/2)
                 self.win.blit(img, rect)
+
+    def get_board(self):
+        board = deepcopy(self.grid)
+        return list(map(lambda x: list(map(lambda y: y if y != -1 else 0, x)), board))
